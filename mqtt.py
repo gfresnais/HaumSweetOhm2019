@@ -11,33 +11,16 @@
 # think this stuff is worth it, you can buy me a beer or coffee in return
 #
 
-import time
-
 from mqttmpd import MQTTMPDController
 
 # instanciating a controller
 controller = MQTTMPDController(
-    mqtt_broker='mpd.lan',
+    mqtt_broker='localhost',
     mqtt_client_id='mpd_controller',
-    mqtt_topicbase='music',
+    mqtt_topicbase='laumio/all',
     mqtt_port=1883,
-    mpd_server='mpd.lan',
+    mpd_server='localhost',
     mpd_port=6600
 )
 
-print("Connexion au MQTT")
-client = controller.mqtt_connect()
-
-print("Début de la boucle...")
-client.loop_start()
-
-print("Subscribe to topic", "laumio/status/advertise")
-client.subscribe("laumio/status/advertise")
-
-print("Publication du discover")
-client.publish("discover")
-
-time.sleep(3)
-
-print("Fin de la boucle...")
-client.loop_stop()
+controller.loop_forever()

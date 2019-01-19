@@ -21,10 +21,14 @@ r, g, b = 255, 0, 0
 
 l.fillColor(r, g, b)
 
-# r = 255
-# g = 0
-# b = 0
+time.sleep(2)
 
-# for i in range(0, 13):
-#    l.setPixelColor(i, r, g, b)
-#    time.sleep(1)
+l.wipeOut()
+
+time.sleep(2)
+
+r, g, b = 0, 0, 255
+
+for i in range(0, 13):
+    l.setPixelColor(i, r, g, b)
+    time.sleep(0.5)
