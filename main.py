@@ -17,16 +17,14 @@ l = Laumio(ip)
 # Affichage du statut
 print( l.status() )
 
-r = 0
-g = 0
-b = 255
+r, g, b = 255, 0, 0
 
 l.fillColor(r, g, b)
 
-r = 255
-g = 0
-b = 0
+# r = 255
+# g = 0
+# b = 0
 
-for i in range(0, 13):
-    l.setPixelColor(i, r, g, b)
-    time.sleep(1)
+# for i in range(0, 13):
+#    l.setPixelColor(i, r, g, b)
+#    time.sleep(1)
