@@ -8,28 +8,25 @@ import time
 sys.path.append(os.path.dirname(sys.argv[0]) + '/../')
 from laumio import *
 
-
-# Fonction print_usage
-# Sert à afficher l'utilisation du Laumio
-def print_usage():
-    print(
-        "Usage: " + sys.argv[0] + "\n\
-\n\
-    example:\n\
-        " + sys.argv[0] + "\n\
-")
-    sys.exit(1)
-
-
-if len(sys.argv) != 1:
-    print(len(sys.argv))
-    print_usage()
-
 # L'ip du Laumio
-ip = "Mon IP"
+ip = "192.168.4.1"
 
 # Création du Laumio
 l = Laumio(ip)
 
 # Affichage du statut
-print(str(l.status().data))
+print( l.status() )
+
+r = 0
+g = 0
+b = 255
+
+l.fillColor(r, g, b)
+
+r = 255
+g = 0
+b = 0
+
+for i in range(0, 13):
+    l.setPixelColor(i, r, g, b)
+    time.sleep(1)
