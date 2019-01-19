@@ -1,26 +1,30 @@
 #! /usr/bin/env python
-# -*- coding:utf8 -*-
-#
-# test_it.py
-#
-# Copyright © 2019 Mathieu Gaborit (matael) <mathieu@matael.org>
-#
-# Licensed under the "THE BEER-WARE LICENSE" (Revision 42):
-# Mathieu (matael) Gaborit wrote this file. As long as you retain this notice
-# you can do whatever you want with this stuff. If we meet some day, and you
-# think this stuff is worth it, you can buy me a beer or coffee in return
-#
 
-from mqttmpd import MQTTMPDController
+import time
 
-# instanciating a controller
-controller = MQTTMPDController(
-    mqtt_broker='localhost',
-    mqtt_client_id='mpd_controller',
-    mqtt_topicbase='laumio/all',
-    mqtt_port=1883,
-    mpd_server='localhost',
-    mpd_port=6600
-)
+import paho.mqtt.client as mqtt
 
-controller.loop_forever()
+
+# This is the Subscriber
+
+def on_connect(client, userdata, flags, rc):
+    print("Connected with result code " + str(rc))
+    #client.subscribe("laumio/status/#")
+    print("Animation rainbow")
+    client.publish('laumio/Laumio_OFC168/json', "{'command':'animate_rainbow'}")
+
+
+def on_message(client, userdata, msg):
+    print(msg.payload.decode())
+
+
+client = mqtt.Client()
+client.connect("mpd.lan", 1883)
+
+client.on_connect = on_connect
+client.on_message = on_message
+
+print("Start")
+client.loop_forever()
+
+client.disconnect()

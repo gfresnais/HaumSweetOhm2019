@@ -17,6 +17,10 @@ l = Laumio(ip)
 # Affichage du statut
 print( l.status() )
 
+l.rainbow()
+
+time.sleep(2)
+
 r, g, b = 255, 0, 0
 
 l.fillColor(r, g, b)
@@ -25,7 +29,7 @@ time.sleep(2)
 
 l.wipeOut()
 
-time.sleep(2)
+time.sleep(1)
 
 r, g, b = 0, 0, 255
 
