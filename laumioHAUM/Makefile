@@ -1,5 +1,5 @@
 
-ARDUINO_BIN ?= ~/.programmes/arduino-1.6.9/arduino
+ARDUINO_BIN ?= /usr/bin/arduino
 TARGET = laumio/laumio
 
 all: verify
