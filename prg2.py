@@ -10,7 +10,7 @@ from laumio import *
 
 
 tab=[1,0,0,0,0,0,0,0,0,0,0,0,0,0]
-ips=["192.169.0.238", "192.169.0.27", "192.169.0.181", "192.169.0.230", "192.169.0.68", "192.169.0.3", "192.169.0.146", "192.169.0.114", "192.169.0.31", "192.169.0.", "192.169.0.86"]
+ips=["Laumio_0FC168", "Laumio_10508F", "Laumio_0FBFBF", "Laumio_104A13", "Laumio_104F03", "Laumio_107DA8", "Laumio_10805F", "Laumio_1D9486", "Laumio_88813D", "Laumio_CD0522", "Laumio_D454DB"]
 ip=[]
 
 
@@ -208,11 +208,10 @@ def fin():
             r,g,b = 0,0,0
         
         
-        for k in ips:
-            ##p=ip[k]
+        for k in ip:
             l = Laumio(k)
             l.setPixelColor(i, r, g, b)
-            time.sleep(0.5)
+            time.sleep(0.1)
     
     l.wipeOut()
         

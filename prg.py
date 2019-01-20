@@ -112,7 +112,6 @@ def V9():
         L9.set('r')
         tab[9]='r'
 
-
 def V10():
     if (L10.get() == 'r') :
         L10.set('g')
@@ -157,14 +156,13 @@ def V13():
         L13.set('r')
         tab[13]='r'
 
-ip = "192.169.0.181"
-l = Laumio(ip)
+
 
 
 
 def fin():
-    
-    
+    ip = "Laumio_0FC168"
+    l = Laumio(ip)
     for i in range(0, 13):
         j = i+1
         if (tab[j]=='r'):
