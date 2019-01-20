@@ -190,8 +190,52 @@ def B10():
     
 def B11():
     ip.append(ips[10])
+
+
+
+
+def script1():
     
     
+    for j in range(0,1000):
+        k=j/1000
+        val = 255*k
+        r,g,b=123,int(val),int(val)
+        for i in ips:
+            l = Laumio(i)
+            l.fillColor(r, g, b)
+    fenetre.destroy()
+    
+    
+def script2():
+    
+    for j in range(0,1020):
+        k=j%255
+        k=int(k)
+        r,g,b=200,k,k
+        for i in ips:
+            l = Laumio(i)
+            l.fillColor(r, g, b)
+    fenetre.destroy()        
+
+
+def blue():
+    for i in ips:
+        l = Laumio(i)
+        l.fillColor(0, 0, 255)
+def red():
+    for i in ips:
+        l = Laumio(i)
+        l.fillColor(255, 0, 0)
+def green():
+    for i in ips:
+        l = Laumio(i)
+        l.fillColor(0, 255, 0)
+def orange():
+    for i in ips:
+        l = Laumio(i)
+        l.fillColor(253, 106, 2)
+
 
 def fin():
     
@@ -211,9 +255,14 @@ def fin():
         for k in ip:
             l = Laumio(k)
             l.setPixelColor(i, r, g, b)
-            time.sleep(0.1)
+            #time.sleep(0.1)
     
-    l.wipeOut()
+    
+    #time.sleep(3)
+    
+    for k in ip:
+        l = Laumio(k)
+        l.wipeOut()
         
     fenetre.destroy()
     
@@ -262,6 +311,14 @@ while(1):
     tk.Button(fenetre, text='9', command=B9,borderwidth=1).grid(row=7, column=3)
     tk.Button(fenetre, text='10', command=B10,borderwidth=1).grid(row=7, column=4)
     tk.Button(fenetre, text='11', command=B11,borderwidth=1).grid(row=7, column=5)
+    
+    tk.Button(fenetre, text='script1', command=script1,borderwidth=1).grid(row=9, column=4)
+    tk.Button(fenetre, text='script2', command=script2,borderwidth=1).grid(row=9, column=5)
+    
+    tk.Button(fenetre, text='red', command=red,borderwidth=1).grid(row=10, column=2)
+    tk.Button(fenetre, text='green', command=green,borderwidth=1).grid(row=10, column=3)
+    tk.Button(fenetre, text='blue', command=blue,borderwidth=1).grid(row=10, column=4)
+    tk.Button(fenetre, text='orange', command=orange,borderwidth=1).grid(row=10, column=5)
     
     
     tk.Button(fenetre, text="finaliser", command=fin,borderwidth=1).grid(row=8, column=7)

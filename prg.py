@@ -161,7 +161,8 @@ def V13():
 
 
 def fin():
-    ip = "Laumio_0FC168"
+    ip = "Laumio_88813D"
+    #ip="Laumio_1D9486"
     l = Laumio(ip)
     for i in range(0, 13):
         j = i+1
