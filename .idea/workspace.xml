@@ -4,6 +4,7 @@
     <list default="true" id="05ef42ea-ec8b-41f0-b60c-ea0a659215e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mqtt.py" beforeDir="false" afterPath="$PROJECT_DIR$/mqtt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prg2.py" beforeDir="false" afterPath="$PROJECT_DIR$/prg2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,59 +16,60 @@
     <session id="-1719765831">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="3" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="18" />
+          <entry key="py" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="18" />
+          <entry key="Python" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4527" />
+          <entry key="py" value="5028" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4527" />
+          <entry key="Python" value="5028" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mqtt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
-                <marker date="1547949616253" expanded="true" signature="136:137" ph="..." />
-                <marker date="1547949616253" expanded="true" signature="573:617" ph="..." />
+                <marker date="1547962143563" expanded="true" signature="136:137" ph="..." />
+                <marker date="1547962143563" expanded="true" signature="573:617" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/prg2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+            <state relative-caret-position="235">
+              <caret line="257" column="13" selection-start-line="257" selection-start-column="13" selection-end-line="257" selection-end-column="13" />
               <folding>
-                <element signature="e#48#58#0" expanded="true" />
+                <element signature="e#2#22#0" expanded="true" />
+                <marker date="1547962217403" expanded="true" signature="324:326" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,6 +85,7 @@
       <list>
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/mqtt.py" />
+        <option value="$PROJECT_DIR$/prg2.py" />
       </list>
     </option>
   </component>
@@ -139,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mqtt">
+  <component name="RunManager" selected="Python.prg2">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HaumSweetOhm2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,12 +185,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="prg2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HaumSweetOhm2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/prg2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.mqtt" />
+      <item itemvalue="Python.prg2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.prg2" />
         <item itemvalue="Python.mqtt" />
         <item itemvalue="Python.main" />
       </list>
@@ -254,9 +280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/prg2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -267,14 +290,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/prg.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/mqtt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
-            <marker date="1547949616253" expanded="true" signature="136:137" ph="..." />
-            <marker date="1547949616253" expanded="true" signature="573:617" ph="..." />
+            <marker date="1547962143563" expanded="true" signature="136:137" ph="..." />
+            <marker date="1547962143563" expanded="true" signature="573:617" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prg2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="257" column="13" selection-start-line="257" selection-start-column="13" selection-end-line="257" selection-end-column="13" />
+          <folding>
+            <element signature="e#2#22#0" expanded="true" />
+            <marker date="1547962217403" expanded="true" signature="324:326" ph="..." />
           </folding>
         </state>
       </provider>

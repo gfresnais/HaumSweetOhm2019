@@ -8,11 +8,11 @@ import time
 
 from laumio import *
 
+import mqtt
 
 tab=[1,0,0,0,0,0,0,0,0,0,0,0,0,0]
 ips=["Laumio_0FC168", "Laumio_10508F", "Laumio_0FBFBF", "Laumio_104A13", "Laumio_104F03", "Laumio_107DA8", "Laumio_10805F", "Laumio_1D9486", "Laumio_88813D", "Laumio_CD0522", "Laumio_D454DB"]
 ip=[]
-
 
 def V1():
     if (L1.get() == 'r') :
@@ -255,7 +255,7 @@ def fin():
         for k in ip:
             l = Laumio(k)
             l.setPixelColor(i, r, g, b)
-            #time.sleep(0.1)
+            time.sleep(0.1)
     
     
     #time.sleep(3)
@@ -282,47 +282,50 @@ L10 = tk.StringVar()
 L11 = tk.StringVar()
 L12 = tk.StringVar()
 L13 = tk.StringVar()
+    
+tk.Button(fenetre, textvariable=L1, command=V1,borderwidth=1).grid(row=1, column=2)
+tk.Button(fenetre, textvariable=L2, command=V2,borderwidth=1).grid(row=2, column=1)
+tk.Button(fenetre, textvariable=L3, command=V3,borderwidth=1).grid(row=2, column=2)
+tk.Button(fenetre, textvariable=L4, command=V4,borderwidth=1).grid(row=2, column=3)
+tk.Button(fenetre, textvariable=L5, command=V5,borderwidth=1).grid(row=2, column=4)
+tk.Button(fenetre, textvariable=L6, command=V6,borderwidth=1).grid(row=3, column=1)
+tk.Button(fenetre, textvariable=L7, command=V7,borderwidth=1).grid(row=3, column=2)
+tk.Button(fenetre, textvariable=L8, command=V8,borderwidth=1).grid(row=3, column=3)
+tk.Button(fenetre, textvariable=L9, command=V9,borderwidth=1).grid(row=3, column=4)
+tk.Button(fenetre, textvariable=L10, command=V10,borderwidth=1).grid(row=4, column=1)
+tk.Button(fenetre, textvariable=L11, command=V11,borderwidth=1).grid(row=4, column=2)
+tk.Button(fenetre, textvariable=L12, command=V12,borderwidth=1).grid(row=4, column=3)
+tk.Button(fenetre, textvariable=L13, command=V13,borderwidth=1).grid(row=4, column=4)
+    
+tk.Button(fenetre, text='1', command=B1,borderwidth=1).grid(row=6, column=1)
+tk.Button(fenetre, text='2', command=B2,borderwidth=1).grid(row=6, column=2)
+tk.Button(fenetre, text='3', command=B3,borderwidth=1).grid(row=6, column=3)
+tk.Button(fenetre, text='4', command=B4,borderwidth=1).grid(row=6, column=4)
+tk.Button(fenetre, text='5', command=B5,borderwidth=1).grid(row=6, column=5)
+tk.Button(fenetre, text='6', command=B6,borderwidth=1).grid(row=6, column=6)
+tk.Button(fenetre, text='7', command=B7,borderwidth=1).grid(row=7, column=1)
+tk.Button(fenetre, text='8', command=B8,borderwidth=1).grid(row=7, column=2)
+tk.Button(fenetre, text='9', command=B9,borderwidth=1).grid(row=7, column=3)
+tk.Button(fenetre, text='10', command=B10,borderwidth=1).grid(row=7, column=4)
+tk.Button(fenetre, text='11', command=B11,borderwidth=1).grid(row=7, column=5)
+    
+tk.Button(fenetre, text='script1', command=script1,borderwidth=1).grid(row=9, column=4)
+tk.Button(fenetre, text='script2', command=script2,borderwidth=1).grid(row=9, column=5)
+    
+tk.Button(fenetre, text='red', command=red,borderwidth=1).grid(row=10, column=2)
+tk.Button(fenetre, text='green', command=green,borderwidth=1).grid(row=10, column=3)
+tk.Button(fenetre, text='blue', command=blue,borderwidth=1).grid(row=10, column=4)
+tk.Button(fenetre, text='orange', command=orange,borderwidth=1).grid(row=10, column=5)
+    
+    
+tk.Button(fenetre, text="finaliser", command=fin,borderwidth=1).grid(row=8, column=7)
 
+client = mqtt.main()
 
-while(1):
-    
-    tk.Button(fenetre, textvariable=L1, command=V1,borderwidth=1).grid(row=1, column=2)
-    tk.Button(fenetre, textvariable=L2, command=V2,borderwidth=1).grid(row=2, column=1)
-    tk.Button(fenetre, textvariable=L3, command=V3,borderwidth=1).grid(row=2, column=2)
-    tk.Button(fenetre, textvariable=L4, command=V4,borderwidth=1).grid(row=2, column=3)
-    tk.Button(fenetre, textvariable=L5, command=V5,borderwidth=1).grid(row=2, column=4)
-    tk.Button(fenetre, textvariable=L6, command=V6,borderwidth=1).grid(row=3, column=1)
-    tk.Button(fenetre, textvariable=L7, command=V7,borderwidth=1).grid(row=3, column=2)
-    tk.Button(fenetre, textvariable=L8, command=V8,borderwidth=1).grid(row=3, column=3)
-    tk.Button(fenetre, textvariable=L9, command=V9,borderwidth=1).grid(row=3, column=4)
-    tk.Button(fenetre, textvariable=L10, command=V10,borderwidth=1).grid(row=4, column=1)
-    tk.Button(fenetre, textvariable=L11, command=V11,borderwidth=1).grid(row=4, column=2)
-    tk.Button(fenetre, textvariable=L12, command=V12,borderwidth=1).grid(row=4, column=3)
-    tk.Button(fenetre, textvariable=L13, command=V13,borderwidth=1).grid(row=4, column=4)
-    
-    tk.Button(fenetre, text='1', command=B1,borderwidth=1).grid(row=6, column=1)
-    tk.Button(fenetre, text='2', command=B2,borderwidth=1).grid(row=6, column=2)
-    tk.Button(fenetre, text='3', command=B3,borderwidth=1).grid(row=6, column=3)
-    tk.Button(fenetre, text='4', command=B4,borderwidth=1).grid(row=6, column=4)
-    tk.Button(fenetre, text='5', command=B5,borderwidth=1).grid(row=6, column=5)
-    tk.Button(fenetre, text='6', command=B6,borderwidth=1).grid(row=6, column=6)
-    tk.Button(fenetre, text='7', command=B7,borderwidth=1).grid(row=7, column=1)
-    tk.Button(fenetre, text='8', command=B8,borderwidth=1).grid(row=7, column=2)
-    tk.Button(fenetre, text='9', command=B9,borderwidth=1).grid(row=7, column=3)
-    tk.Button(fenetre, text='10', command=B10,borderwidth=1).grid(row=7, column=4)
-    tk.Button(fenetre, text='11', command=B11,borderwidth=1).grid(row=7, column=5)
-    
-    tk.Button(fenetre, text='script1', command=script1,borderwidth=1).grid(row=9, column=4)
-    tk.Button(fenetre, text='script2', command=script2,borderwidth=1).grid(row=9, column=5)
-    
-    tk.Button(fenetre, text='red', command=red,borderwidth=1).grid(row=10, column=2)
-    tk.Button(fenetre, text='green', command=green,borderwidth=1).grid(row=10, column=3)
-    tk.Button(fenetre, text='blue', command=blue,borderwidth=1).grid(row=10, column=4)
-    tk.Button(fenetre, text='orange', command=orange,borderwidth=1).grid(row=10, column=5)
-    
-    
-    tk.Button(fenetre, text="finaliser", command=fin,borderwidth=1).grid(row=8, column=7)
+client.loop_start()
 
+fenetre.mainloop()
 
-    
-    fenetre.mainloop()
+client.loop_stop()
+
+client.disconnect()

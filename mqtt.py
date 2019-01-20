@@ -29,7 +29,7 @@ def subAtmo(client):
 # This is the Subscriber
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code " + str(rc))
-    #subBP(client)
+    subBP(client)
     subTel(client)
     #subPres(client)
     #subDist(client)
@@ -104,13 +104,11 @@ def on_message(client, userdata, msg):
         print('9 PRESSED')
 
 
-client = mqtt.Client()
-client.connect("mpd.lan", 1883)
+def main():
+    client = mqtt.Client()
+    client.connect("mpd.lan", 1883)
 
-client.on_connect = on_connect
-client.on_message = on_message
+    client.on_connect = on_connect
+    client.on_message = on_message
 
-print("Start")
-client.loop_forever()
-
-client.disconnect()
+    return client
